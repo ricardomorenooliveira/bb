@@ -1,5 +1,6 @@
 package com.bb.dominio;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -8,8 +9,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CotacaoDolarComercialDTO {
-	public BigDecimal cotacaoCompra;
-	public BigDecimal cotacaoVenda;
-	public LocalDateTime dataHoraCotacao;
+public class CotacaoDolarComercialDTO implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
+	private BigDecimal cotacaoCompra;
+	private BigDecimal cotacaoVenda;
+	private LocalDateTime dataHoraCotacao;
 }
